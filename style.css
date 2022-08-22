@@ -1,0 +1,542 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+    flex-direction: column;
+    min-width: 100vh;
+    min-height:100vh;
+    background-color: #3a496a;
+}
+/* header start */
+header {
+    position: relative;
+    width: 90%;
+    height: 85px;
+    display: flex;
+    justify-content:space-between;
+    /* background-color: red; */
+}
+header nav {
+    position: relative;
+}
+header nav:hover ul {
+    display: block;
+    padding: 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between; 
+}
+
+header nav .icon {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 15px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+}
+header nav .icon .line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    z-index: 100;
+}
+header nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+     background-color: #b1c1ce; 
+    width: 150px;
+    height: 180px;
+    padding: 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    display: none; 
+    transition: .5s;
+    z-index: 1000;
+}
+ header nav ul::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    border-top: 10px solid transparent ;
+    border-bottom: 10px solid #b1c1ce ;
+    border-right: 10px solid transparent ;
+    border-left: 10px solid transparent;
+} 
+header nav ul li {
+    border-bottom: 1px solid rgb(219, 217, 217);
+    box-sizing: content-box;
+    height: 25%;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.33em;
+    color: rgb(150, 149, 149);
+    transition: .5s;
+}
+header nav ul li a:hover {
+    margin-left: 15px;
+}
+/* header end */
+/* img start */
+.img {
+    position: relative; 
+    width: 100%;
+    height: 86vh;
+    background: url("bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.img h1 {
+    color: #0368bb;
+    font-size: 5em;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.img p {
+    color: white;
+    font-size: 1.5em;
+    line-height: 30px;
+}
+/* img end */
+/* works start */
+.work {
+
+    position: relative;
+    width: 90%;
+    height: 40vh;
+    
+    display: flex;
+    justify-content: space-between;  
+    background-color: #45526e; 
+        margin-top:50px;
+        padding: 10px;
+;
+
+}
+
+.work .icon {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: calc(80%/2.5);
+    
+    padding: 10px;
+}
+
+.work .icon h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    color:#2c7bbd;
+}
+
+.work .icon p {
+    line-height: 20px;
+    color:rgb(204, 224, 252);
+}
+/* works end */
+/* serrvices start */
+
+.services {
+    position: relative;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+     background-color: #45526e;
+        margin-top:50px;
+;
+
+}
+
+.services h1 {
+    font-size: 6em;
+    letter-spacing: -10px;
+    color: #47577a;
+}
+
+.services p {
+    margin-top: -30px;
+    color: rgb(173, 173, 173);
+}
+
+.services .left {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 66vh;
+    /* height: 80vh; */
+    /* background-color: aqua; */
+    z-index: -1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.services .right {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 66vh;
+    /* height: 80vh; */
+    /* background-color: aqua; */
+    z-index: -1000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.services .left .one-l {
+    position: absolute;
+    top:25px;
+    left: 90px;
+}
+
+.services .left p {
+    margin-left: 70px;
+}
+
+.services .left .two-l {
+    position: absolute;
+    bottom: 95px;
+    left: 90px;
+}
+.services .right .two-r {
+    position: absolute;
+    bottom: 80px;
+    right: 200px;
+}
+
+.services .right .one-r {
+    position: absolute;
+    top:25px;
+    right:  200px;
+}
+/* serrvices end */
+/* portfolio start */
+.portfolio {
+    position: relative;
+    width: 90%;
+    height: 150vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: #45526e; 
+        margin-top:50px;
+;
+
+}
+
+.portfolio h1 {
+    margin-top: 10px;
+    font-size: 6em;
+    letter-spacing: -10px;
+    color: #47577a;
+}
+
+.portfolio p {
+    margin-top: -20px;
+    color: rgb(173, 173, 173);
+}
+
+.portfolio .part-1 {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+    width: 385px;
+    height: 350px;
+    background-color: #3a496a;
+    visibility: hidden;
+    /* transition: .5s; */
+    border-radius:20px;
+    overflow:hidden;
+    
+}
+
+.portfolio .part-1 p {
+    z-index: 10000;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+}
+
+.portfolio .part-1:hover {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.portfolio .part-1 .phot-1 {
+    position: absolute;
+    width: 385px;
+    height: 260px;
+    
+     background:url("ws.jpg"); 
+     background-position:center;
+     background-size:cover;
+    visibility: visible;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(3px);
+    filter:grayscale(90%);
+    outline: 10px solid rgb(255, 255, 255);
+}
+
+.portfolio .part-1 .phot-1:hover {
+    filter: blur(0px);
+    outline: none;
+
+}
+
+.portfolio .part-1 .phot-1 h2 {
+    font-size: 3em;
+    color: antiquewhite;
+}
+.portfolio .part-2 {
+    position: absolute;
+    top: 150px;
+    right: 5px;
+    width: 385px;
+    height: 350px;
+    background-color: #3a496a;
+    visibility: hidden;
+    /* transition: .5s; */
+    border-radius:20px;
+
+     overflow:hidden; 
+    
+}
+
+.portfolio .part-2 p {
+    z-index: 10000;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+}
+
+.portfolio .part-2:hover {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.portfolio .part-2 .phot-2 {
+    position: absolute;
+    width: 385px;
+    height: 260px;
+    background-color: rgb(255, 255, 255);
+    /* background:url(..\img\ws.jpg); */
+    background:url(x.jpg); 
+     background-position:center;
+     background-size:cover;
+    visibility: visible;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    outline: 10px solid rgb(255, 255, 255);
+    backdrop-filter: blur(3px);
+    filter:grayscale(90%);
+}
+
+.portfolio .part-2 .phot-2:hover {
+    filter: blur(0px);
+    outline: none;
+
+}
+.portfolio .part-2 .phot-2 h2 {
+    font-size: 3em;
+    color: antiquewhite;
+}
+.portfolio .part-3 {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    width: 385px;
+    height: 350px;
+    background-color: #3a496a;
+    visibility: hidden;
+    /* transition: .5s; */
+    border-radius:20px;
+
+    overflow:hidden;
+    
+}
+
+.portfolio .part-3 p {
+    z-index: 10000;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+}
+
+.portfolio .part-3:hover {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.portfolio .part-3 .phot-3 {
+    position: absolute;
+    width: 385px;
+    height: 260px;
+    background-color: rgb(255, 255, 255);
+    /* background:url(..\img\ws.jpg); */
+    background:url("z.jpg"); 
+     background-position:center;
+     background-size:cover;
+    visibility: visible;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    outline: 10px solid rgb(255, 255, 255);
+    backdrop-filter: blur(3px);
+    filter:grayscale(90%);
+}
+
+.portfolio .part-3 .phot-3:hover {
+    filter: blur(0px);
+    outline: none;
+
+}
+.portfolio .part-3 .phot-3 h2 {
+    font-size: 3em;
+    color: antiquewhite;
+}
+.portfolio .part-4 {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    width: 385px;
+    height: 350px;
+    background-color: #3a496a;
+    visibility: hidden;
+    /* transition: .5s; */
+    border-radius:20px;
+
+    overflow:hidden;
+    
+}
+
+.portfolio .part-4 p {
+    z-index: 10000;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+}
+
+.portfolio .part-4:hover {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.portfolio .part-4 .phot-4 {
+    position: absolute;
+    width: 385px;
+    height: 260px;
+    background-color: rgb(255, 255, 255);
+    background:url("y.jpg"); 
+     background-position:center;
+     background-size:cover;
+    /* background:url(..\img\ws.jpg); */
+    visibility: visible;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    filter:grayscale(90%);
+    outline: 10px solid rgb(154, 154, 189);
+}
+
+.portfolio .part-4 .phot-4:hover {
+    filter: blur(0px);
+    outline: none;
+}
+
+.portfolio .part-4 .phot-4 h2 {
+    font-size: 3em;
+    color: antiquewhite;
+}
+/* portfolio end */
+/* contact start */
+.contact {
+    position: relative;
+    width: 90% ;
+    height: 70vh;
+   background-color: #45526e; 
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+        margin-top:50px;
+        margin-bottom: 50px;
+
+}
+
+.contact h1 {
+    margin-top: 10px;
+    font-size: 6em;
+    letter-spacing: -10px;
+    color: #47577a;
+}
+
+.contact p {
+    margin-top: -25px;
+    color: rgb(173, 173, 173);
+}
+
+.contact .line {
+    font-weight: 900;
+    font-size: 2.5em;
+    margin-top: 80px;
+    text-align:center;
+}
+ 
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #2e3d5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer .footer {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #47577a;
+}
+footer .footer .brand {
+    color:#0368bb
+}
+/* contact end */
+section {
+    border-radius: 5px;
+    border: 2px solid rgba(114, 139, 250, 0.24);
+}
